@@ -1,0 +1,23 @@
+h1 本の詳細
+
+p#notice
+  = notice
+p
+  strong
+    | タイトル:
+  = @book.title
+p
+  strong
+    | メモ:
+  = @book.memo
+p
+  strong
+    | 著者:
+  = @book.author
+p
+  strong
+    | 画像:
+  = image_tag(@book.picture_url) if @book.picture.present?
+= link_to '編集', edit_book_path(@book)
+|  | 
+= link_to '戻る', books_path
