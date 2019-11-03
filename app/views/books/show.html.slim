@@ -1,23 +1,27 @@
-h1 本の詳細
+h1 = t('book.show.heading')
 
 p#notice
   = notice
 p
   strong
-    | タイトル:
+    = Book.human_attribute_name(:title)
+    | :
   = @book.title
 p
   strong
-    | メモ:
+    = Book.human_attribute_name(:memo)
+    | :
   = @book.memo
 p
   strong
-    | 著者:
+    = Book.human_attribute_name(:author)
+    | :
   = @book.author
 p
   strong
-    | 画像:
+    = Book.human_attribute_name(:picture)
+    | :
   = image_tag(@book.picture_url) if @book.picture.present?
-= link_to '編集', edit_book_path(@book)
+= link_to t('book.show.edit'), edit_book_path(@book)
 |  | 
-= link_to '戻る', books_path
+= link_to t('book.back'), books_path

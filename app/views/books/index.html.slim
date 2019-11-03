@@ -1,7 +1,6 @@
 p#notice
   = notice
-h1
-  | 本一覧
+h1 = t('book.index.heading')
 table
   thead
     tr
@@ -17,8 +16,8 @@ table
         td= book.memo
         td= book.author
         td= book.picture
-        td= link_to '詳細', book
-        td= link_to '編集', edit_book_path(book)
-        td= link_to '削除', book, method: :delete, data: { confirm: "「#{book.title}」を削除します。よろしいですか？" }
+        td= link_to t('book.index.show'), book
+        td= link_to t('book.index.edit'), edit_book_path(book)
+        td= link_to t('book.index.destroy'), book, method: :delete, data: { confirm: t('book.index.confirm', title: book.title) }
 br
-= link_to '本を登録する', new_book_path
+= link_to t('book.index.create'), new_book_path

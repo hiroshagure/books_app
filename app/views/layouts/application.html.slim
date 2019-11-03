@@ -1,5 +1,5 @@
 doctype html
-html lang="ja"
+html
   head
     title
       | BooksApp
@@ -8,4 +8,12 @@ html lang="ja"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    header
+      nav
+        ul
+          li#lang-nav
+          - if I18n.locale.to_s == "en"
+            = link_to('日本語', locale: 'ja')
+          - else 
+            = link_to('English', locale: 'en')
     = yield
