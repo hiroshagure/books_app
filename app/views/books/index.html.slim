@@ -19,5 +19,8 @@ table
         td= link_to t('book.index.show'), book
         td= link_to t('book.index.edit'), edit_book_path(book)
         td= link_to t('book.index.destroy'), book, method: :delete, data: { confirm: t('book.index.confirm', title: book.title) }
+= paginate @books
+div.page_entries_info
+  = page_entries_info @books
 br
 = link_to t('book.index.create'), new_book_path
