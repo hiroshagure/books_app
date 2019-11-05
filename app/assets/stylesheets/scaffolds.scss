@@ -90,3 +90,18 @@ label {
 #lang-nav {
   list-style: none;
 }
+
+nav.pagination {
+  margin: 5px 0px;
+}
+
+// ページインフォ
+div.page_entries_info {
+  margin: 5px 0px;
+}
+
+span {
+  &.page {
+    padding: 0px 3px;
+  }
+}
