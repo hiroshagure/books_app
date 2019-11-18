@@ -16,4 +16,10 @@ html
             = link_to('日本語', locale: 'ja')
           - else 
             = link_to('English', locale: 'en')
+    - if notice
+      p.alert.alert-success
+        = notice
+    -if alert
+      p.alert.alert-danger
+        = alert
     = yield
