@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Users::ProfilesController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
   before_action :authenticate_user!, only: [:edit, :update]
