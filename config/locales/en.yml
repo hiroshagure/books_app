@@ -40,6 +40,7 @@ en:
           has_many: Cannot delete record because dependent %{record} exist
     models:
       book:
+      user:
     attributes:
       book:
         title:
@@ -48,6 +49,13 @@ en:
         created_at:
         updated_at:
         picture:
+      user:
+        name:
+        postcode:
+        address:
+        biography:
+        created_at:
+        updated_at:
   book:
     index:
       heading: Books
@@ -64,6 +72,15 @@ en:
     create: The book has been registered.
     update: The book was updated.
     delete: The book has been deleted.
+  user:
+    index:
+      heading: Users
+    edit:
+      profile: Edit profile
+    update: The profile was updated.
+  session:
+    login: Log in
+    logout: Log out
   date:
     abbr_day_names:
       - Sun

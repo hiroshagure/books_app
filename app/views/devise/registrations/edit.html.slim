@@ -10,6 +10,10 @@ h2
     div
       = t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email)
   .field
+    = f.label :name
+    br
+    = f.text_field :name
+  .field
     = f.label :password
     i
       | (
