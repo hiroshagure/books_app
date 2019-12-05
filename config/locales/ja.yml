@@ -9,6 +9,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     models:
       book: 本
+      user: ユーザー
     attributes:
       book:
         title: タイトル
@@ -17,6 +18,13 @@ ja:
         created_at: 登録日時
         updated_at: 更新日時
         picture: 画像
+      user:
+        name: 名前
+        postcode: 郵便番号
+        address: 住所
+        biography: 自己紹介
+        created_at: 登録日時
+        updated_at: 更新日時
   book:
     index:
       heading: 本一覧
@@ -36,6 +44,17 @@ ja:
     update: 本を更新しました。
     delete: 本を削除しました。
     back: 戻る
+  user:
+    index:
+      heading: ユーザー一覧
+    edit:
+      profile: プロフィール変更
+    profile: プロフィール
+    My profile: マイプロフィール
+    update: プロフィールを更新しました。
+  session:
+    login: ログイン
+    logout: ログアウト
   date:
     abbr_day_names:
       - 日
