@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_011759) do
+ActiveRecord::Schema.define(version: 2019_11_29_012836) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.text "memo"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2019_11_26_011759) do
     t.integer "postcode"
     t.string "address"
     t.text "biography"
+    t.string "provider", default: "", null: false
+    t.text "uid", default: "", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
